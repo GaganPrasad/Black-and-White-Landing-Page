@@ -1,0 +1,168 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: 'Raleway', sans-serif;
+  font-family: 'Major Mono Display', monospace;
+  height: 100vh;
+  color: #F2F2F2;
+  z-index: 1;
+}
+.background{
+  position: absolute;
+  background-color: #404040;
+  width: 100%;
+  height: 50vh;
+  /*clip-path: polygon(0 0, 0% 100%, 100% 0);*/
+  z-index: -1;
+}
+.darkContent{
+  position: absolute;
+  font-family: 'Montserrat', sans-serif;
+  top: 40vh;
+  right: 30vh;
+
+}
+.lightContent{
+  position: absolute;
+  font-family: 'Montserrat', sans-serif;
+  top: 55vh;
+  right: 70%;
+  color: black;
+}
+.BackBoder{
+  position: absolute;
+  margin: 2vh 2vh;
+  width: 98%;
+  height: 96vh;
+  border: 5px solid black;
+}
+#logo{
+  font-family: 'Major Mono Display', monospace;
+  font-size: 10vh;
+}
+.text-black{
+  /*color: #b5b5b5;*/
+  color: black;
+  font-weight: bold;
+}
+.menu{
+  text-align: center;
+  margin-left: 6vh;
+  font-family: 'Montserrat', sans-serif;
+}
+.menu ul{
+  list-style-type: none;
+}
+.menu ul li{
+  display: inline-block;
+  text-align: center;
+  margin: 0vh 8vh 5vh;
+  /*font-size: 3.5vh;*/
+}
+/*.menu ul li::before,.menu ul li::after {
+  content: '';
+  display: block;
+  width: 20px;
+  background-color: gray;
+  margin: 0 auto;
+  height: .5vh;
+  transition: ease-in-out 100ms;
+  border-radius: 5px;
+
+}
+.menu ul li:hover::before, .menu ul li:hover::after{
+  width: 100%;
+
+}*/
+.menu ul li a{
+  text-decoration: none;
+  color: #BFBFBF;
+  text-transform: uppercase;
+  transition: ease-in-out 200ms;
+
+}
+.menu ul li a:hover{
+  /* color: black; */
+  color: white;
+}
+.slider{
+  background-color: black;
+  height:450px;
+  width: 450px;
+  margin: 0 auto;
+  text-align: center;
+  overflow: hidden;
+  border-radius: 50%;
+  box-shadow: 3px 20px 25px grey;
+}
+.slider img{
+  height:450px;
+  width: 450px;
+  border-radius: 50%;
+  animation: zoom 30s ease-in-out alternate infinite;
+}
+@keyframes zoom {
+  0%   { transform: scale(1); }
+  100% { transform: scale(2);}
+}
+.goLeft{
+  position: absolute;
+  color: white;
+  margin-top: 10vh;
+  right: -30px;
+  font-size: 8vh;
+  /*text-shadow: 5px 6px 20px #737373;*/
+  cursor: pointer;
+}
+.goLeft:hover{
+  animation-name: moveLeft;
+  animation-duration: 500ms;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+@keyframes moveLeft {
+  0%   { right:-50px; }
+  100% { right:-20px;}
+}
+.goRight{
+  color: black;
+  position: absolute;
+  color: black;
+  left: -50px;
+  bottom: 0;
+  margin-bottom: 10vh;
+  font-size: 8vh;
+  text-shadow: 5px 6px 20px gray;
+  cursor: pointer;
+}
+.goRight:hover{
+  animation-name: moveRight;
+  animation-duration: 500ms;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+@keyframes moveRight {
+  0%   { left:-50px; }
+  100% { left:-30px;}
+}
+footer{
+  margin-top: 7vh;
+}
+.SocialMedia{
+  color: black;
+  display: inline;
+
+}
+.SocialMedia i{
+  cursor: pointer;
+}
+.CopyRight{
+  color: black;
+  display: inline;
+  float: right;
+}
